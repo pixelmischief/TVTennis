@@ -11,7 +11,7 @@ namespace tvtennis {
 
         public:
         std::vector<tvtennis::body*> p_bodies;
-        tvtennis::vector dimension;
+        tvtennis::vector2f dimension;
 
         world();
         void tick(const float);

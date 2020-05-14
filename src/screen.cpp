@@ -3,7 +3,7 @@
 #include "screen.hpp"
 
 
-tvtennis::screen::screen( const tvtennis::vector dimension, const bool is_full_screen ){
+tvtennis::screen::screen( const tvtennis::vector2f dimension, const bool is_full_screen ){
     _dimension = dimension;
     _is_full_screen = is_full_screen;
 }

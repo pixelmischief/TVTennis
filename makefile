@@ -1,15 +1,23 @@
-OBJS=src/world.cpp src/screen.cpp src/controller.cpp src/tvtennis.cpp
+#OBJS=src/world.cpp src/screen.cpp src/controller.cpp src/game.cpp src/tvtennis.cpp
+OBJS=src/lab_events.cpp
 
-CC=clang++-9
+CC=clang++
 
-COMPILER_FLAGS=-I/usr/include -Iinclude
+INCLUDE_PATHS=-Ih:/factory/include -I./include
 
-LINKER_FLAGS=-L/usr/lib/x86_64-linux-gnu -lSDL2 -lSDL2main -Xlinker
+LIBRARY_PATHS=-Lh:/factory/library
 
-OBJ_NAME=build/tvtennis
+#COMPILER_FLAGS=-w -Wl,-subsystem,windows
+COMPILER_FLAGS=
+
+#LINKER_FLAGS=-lshell32 -lSDL2main -lSDL2 -Xlinker /subsystem:console
+LINKER_FLAGS=-lshell32 -Xlinker /subsystem:console
+
+#OBJ_NAME=build/tvtennis.exe
+OBJ_NAME=build/lab_events.exe
 
 all : $(OBJS)
-	$(CC) $(OBJS) $(COMPILER_FLAGS) $(LINKER_FLAGS) -o$(OBJ_NAME)
+	$(CC) $(OBJS) $(INCLUDE_PATHS) $(LIBRARY_PATHS) $(COMPILER_FLAGS) $(LINKER_FLAGS) -o$(OBJ_NAME)
 
 clean :
 	$(RM) build/*

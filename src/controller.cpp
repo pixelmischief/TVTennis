@@ -5,7 +5,7 @@ tvtennis::controller::controller(){
 }
 
 void tvtennis::controller::map_control( input input, control control ){
-   _map[input] = control;
+   //_map[input] = control;
 }
 
 std::vector<tvtennis::control> tvtennis::controller::read_inputs() {

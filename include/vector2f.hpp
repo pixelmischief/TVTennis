@@ -1,8 +1,8 @@
-#ifndef TVT_VECTOR_H
-#define TVT_VECTOR_H
+#ifndef TVT_VECTOR2F_H
+#define TVT_VECTOR2F_H
 
 namespace tvtennis {
-    struct vector {
+    struct vector2f {
         float x;
         float y;
     };
